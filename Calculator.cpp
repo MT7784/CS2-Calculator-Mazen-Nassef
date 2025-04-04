@@ -45,4 +45,16 @@ double divide(double a, double b) {
     return a / b;
 }
 
+int factorial(int n) {
+    if (n < 0) {
+        cout << "Error, Factorial is undefined for negative numbers." << endl;
+        return 0;
+    }
 
+    int result = 1;
+    for (int i = 2; i <= n; ++i) {
+        result *= i;
+    }
+
+    return result;
+}
