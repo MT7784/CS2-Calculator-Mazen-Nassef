@@ -58,3 +58,18 @@ int factorial(int n) {
 
     return result;
 }
+
+int gcd(int a, int b) {
+    a = absInt(a);
+    b = absInt(b);
+
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+
+    return a;
+}
+
+
