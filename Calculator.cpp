@@ -72,4 +72,13 @@ int gcd(int a, int b) {
     return a;
 }
 
+int lcm(int a, int b) {
+    if (a == 0 || b == 0) return 0;
+    return absInt(a * b) / gcd(a, b);
+}
 
+int generateRandomNumber(int min, int max) {
+    if (min > max) swapInts(min, max);
+    initializeSeed();
+    return min + (rand() % (max - min + 1));
+}
